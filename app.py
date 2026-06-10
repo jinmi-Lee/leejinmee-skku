@@ -73,8 +73,8 @@ st.title("📺 Korean Variety Show Trend Dashboard")
 st.write("Film and Media · SKKU · AI & Data Visualization Project")
 
 st.markdown("""
-This Streamlit dashboard analyzes the popularity, audience engagement, and online trends of Korean variety shows.
-It focuses on how Korean variety content becomes popular through YouTube, social media, and online communities.
+This project is a Streamlit web dashboard that analyzes the popularity and online trends of Korean variety shows.
+It focuses on how Korean variety content becomes popular and spreads through YouTube, social media, and online communities.
 """)
 
 # -----------------------------
@@ -90,6 +90,17 @@ col4.metric("Avg Popularity", round(filtered_data["Popularity Score"].mean(), 1)
 st.divider()
 
 # -----------------------------
+# Project Overview
+# -----------------------------
+st.header("Project Overview")
+
+st.write("""
+As a film and media student, I am interested in how Korean variety shows communicate with audiences through humor,
+editing styles, subtitles, and cast chemistry. This dashboard helps users compare Korean variety shows through
+interactive data visualizations.
+""")
+
+# -----------------------------
 # Popularity Trend
 # -----------------------------
 st.header("01 — Popularity Trend Analysis")
@@ -102,10 +113,11 @@ trend_fig = px.line(
     markers=True,
     title="Popularity Score Changes Over Time"
 )
+
 st.plotly_chart(trend_fig, use_container_width=True)
 
 # -----------------------------
-# Cast Ranking
+# Cast Member Ranking
 # -----------------------------
 st.header("02 — Cast Member Ranking")
 
@@ -119,6 +131,7 @@ ranking_fig = px.bar(
     orientation="h",
     title="Cast Member Popularity Ranking"
 )
+
 st.plotly_chart(ranking_fig, use_container_width=True)
 
 # -----------------------------
@@ -135,6 +148,7 @@ keyword_fig = px.bar(
     y="Frequency",
     title="Trending Keywords and Memes"
 )
+
 st.plotly_chart(keyword_fig, use_container_width=True)
 
 # -----------------------------
@@ -151,6 +165,7 @@ engagement_fig = px.bar(
     barmode="group",
     title="Views, Likes, and Comments by Show"
 )
+
 st.plotly_chart(engagement_fig, use_container_width=True)
 
 # -----------------------------
@@ -167,16 +182,35 @@ comparison_fig = px.scatter(
     hover_data=["Cast Member", "Platform", "Keyword"],
     title="Show Comparison: Views vs Likes"
 )
+
 st.plotly_chart(comparison_fig, use_container_width=True)
+
+# -----------------------------
+# 5W1H
+# -----------------------------
+st.header("5W1H Framework")
+
+st.markdown("""
+**Who:** K-variety fans, media students, content creators, and people interested in Korean entertainment trends.  
+
+**What:** A Streamlit dashboard that analyzes Korean variety show popularity, trends, and audience engagement.  
+
+**When:** It analyzes current and recent online trends.  
+
+**Where:** Data is collected from YouTube, Google Trends, social media platforms, and TV rating websites.  
+
+**Why:** I want to explore how Korean variety shows spread through digital media culture.  
+
+**How:** Using Python, Streamlit, Pandas, Plotly, and AI-generated code.
+""")
 
 # -----------------------------
 # Raw Data
 # -----------------------------
 st.header("06 — Raw Data")
+
 st.dataframe(filtered_data, use_container_width=True)
 
-# -----------------------------
-# Footer
-# -----------------------------
 st.divider()
+
 st.write("Built with Python, Streamlit, Pandas, Plotly, and AI-generated code.")
