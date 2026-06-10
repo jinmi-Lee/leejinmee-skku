@@ -1,0 +1,521 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lee Jinmi | Film & Media Portfolio</title>
+
+<style>
+:root{
+    --primary:#6366f1;
+    --secondary:#8b5cf6;
+    --accent:#06b6d4;
+    --dark:#0f172a;
+    --text:#334155;
+    --light:#f8fafc;
+    --card:#ffffff;
+    --border:#e2e8f0;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(180deg,#f8fafc,#eef2ff);
+    color:var(--text);
+    line-height:1.8;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+    border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+nav .container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 0;
+}
+
+.logo{
+    font-size:1.3rem;
+    font-weight:700;
+    color:var(--primary);
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--text);
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding-top:100px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:4rem;
+    color:var(--dark);
+    margin-bottom:15px;
+}
+
+.hero h2{
+    color:var(--primary);
+    font-size:1.4rem;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:1.15rem;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 30px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    transition:.4s;
+    box-shadow:0 10px 30px rgba(99,102,241,.25);
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+section{
+    padding:90px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:2.3rem;
+    margin-bottom:50px;
+    color:var(--dark);
+}
+
+.card{
+    background:var(--card);
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    margin-bottom:30px;
+    border:1px solid var(--border);
+}
+
+.grid-2{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.grid-3{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card h3{
+    color:var(--primary);
+    margin-bottom:15px;
+}
+
+.highlight{
+    background:linear-gradient(135deg,#6366f1,#8b5cf6);
+    color:white;
+    border:none;
+}
+
+.highlight h3{
+    color:white;
+}
+
+.timeline{
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+}
+
+.step{
+    border-left:4px solid var(--primary);
+    padding-left:20px;
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    justify-content:center;
+}
+
+.skill{
+    padding:12px 20px;
+    background:white;
+    border-radius:50px;
+    border:1px solid var(--border);
+    font-weight:600;
+    transition:.3s;
+}
+
+.skill:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.contact{
+    text-align:center;
+}
+
+.contact-box{
+    max-width:700px;
+    margin:auto;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    color:#64748b;
+}
+
+.hero-gradient{
+    background:linear-gradient(135deg,var(--primary),var(--secondary));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+@media(max-width:768px){
+    .hero h1{
+        font-size:2.8rem;
+    }
+
+    nav ul{
+        display:none;
+    }
+
+    .section-title{
+        font-size:1.9rem;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container">
+<div class="logo">Lee Jinmi</div>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#project">Project</a></li>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#solution">Solution</a></li>
+<li><a href="#plan">Plan</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+</nav>
+
+<section class="hero">
+<div class="hero-content">
+<h1><span class="hero-gradient">Lee Jinmi</span></h1>
+<h2>Film & Media Student at SKKU</h2>
+
+<p>
+Exploring how Korean variety shows communicate with audiences through
+humor, editing styles, subtitle effects, cast chemistry, and digital media culture.
+</p>
+
+<a href="#project" class="btn">View Project</a>
+</div>
+</section>
+
+<section id="about">
+<div class="container">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="card">
+<p>
+I am a Film and Media student at SKKU with a strong interest in Korean variety
+shows and digital entertainment culture. I enjoy analyzing how variety programs
+engage audiences through editing techniques, humor, subtitles, storytelling,
+and cast interactions.
+</p>
+
+<br>
+
+<p>
+My goal is to combine media studies, data visualization, and technology to
+better understand how Korean variety content becomes popular and spreads
+across YouTube, social media platforms, and online communities.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="project">
+<div class="container">
+
+<h2 class="section-title">Project Overview</h2>
+
+<div class="card highlight">
+<h3>Korean Variety Show Trend Dashboard</h3>
+
+<p>
+A Streamlit-based analytics dashboard that examines the popularity,
+audience engagement, and online trends of Korean variety shows using
+real-world data sources such as YouTube, Google Trends, social media,
+and TV rating websites.
+</p>
+</div>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>📺 YouTube Data</h3>
+<p>
+Analyze views, likes, comments, subscriber growth, and video performance.
+</p>
+</div>
+
+<div class="card">
+<h3>📈 Trend Analysis</h3>
+<p>
+Track keyword popularity and trend changes using Google Trends data.
+</p>
+</div>
+
+<div class="card">
+<h3>💬 Social Media</h3>
+<p>
+Monitor audience reactions, sentiment, and online discussions.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="problem">
+<div class="container">
+
+<h2 class="section-title">Problem Statement</h2>
+
+<div class="card">
+<p>
+Korean variety shows generate significant online engagement and influence
+through YouTube and social media platforms. However, popularity,
+engagement metrics, and trending topics are scattered across multiple
+platforms, making it difficult to compare programs and cast members
+effectively.
+</p>
+</div>
+
+</div>
+</section>
+
+<section id="solution">
+<div class="container">
+
+<h2 class="section-title">Proposed Solution</h2>
+
+<div class="grid-3">
+
+<div class="card">
+<h3>Phase 1</h3>
+<p>
+Aggregate data from multiple online platforms into a unified dashboard.
+</p>
+</div>
+
+<div class="card">
+<h3>Phase 2</h3>
+<p>
+Create interactive visualizations and ranking systems using Plotly.
+</p>
+</div>
+
+<div class="card">
+<h3>Phase 3</h3>
+<p>
+Generate meaningful insights about audience engagement and trend evolution.
+</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container">
+
+<h2 class="section-title">5W1H Analysis</h2>
+
+<div class="grid-2">
+
+<div class="card">
+<h3>Who</h3>
+<p>K-variety fans, media students, content creators, and entertainment researchers.</p>
+</div>
+
+<div class="card">
+<h3>What</h3>
+<p>A Streamlit dashboard analyzing popularity, engagement, and trends of Korean variety shows.</p>
+</div>
+
+<div class="card">
+<h3>When</h3>
+<p>Tracks current and recent online trends and popularity changes over time.</p>
+</div>
+
+<div class="card">
+<h3>Where</h3>
+<p>Data sourced from YouTube, Google Trends, Reddit, Twitter/X, and TV rating websites.</p>
+</div>
+
+<div class="card">
+<h3>Why</h3>
+<p>To understand how Korean variety content spreads through digital media culture.</p>
+</div>
+
+<div class="card">
+<h3>How</h3>
+<p>Built using Streamlit, Python, Pandas, Plotly, and data visualization techniques.</p>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="plan">
+<div class="container">
+
+<h2 class="section-title">Development Plan</h2>
+
+<div class="card">
+<div class="timeline">
+
+<div class="step">
+<h3>Step 1 — Foundation</h3>
+<p>Create dashboard layout, sample data, and modern UI design.</p>
+</div>
+
+<div class="step">
+<h3>Step 2 — Interactivity</h3>
+<p>Add trend charts, ranking systems, filters, and engagement analysis tools.</p>
+</div>
+
+<div class="step">
+<h3>Step 3 — Final Enhancement</h3>
+<p>Integrate YouTube API, Google Trends, keyword analysis, and responsive design improvements.</p>
+</div>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">Python</div>
+<div class="skill">Streamlit</div>
+<div class="skill">Pandas</div>
+<div class="skill">Plotly</div>
+<div class="skill">GitHub Pages</div>
+<div class="skill">Data Visualization</div>
+<div class="skill">Dashboard Design</div>
+<div class="skill">AI-Assisted Coding</div>
+<div class="skill">Web Development</div>
+
+</div>
+
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="contact-box card">
+<p>
+Thank you for visiting my portfolio.
+</p>
+
+<br>
+
+<p>
+I am passionate about Korean media, audience engagement,
+digital culture, and data-driven storytelling.
+</p>
+
+<br>
+
+<p>
+📧 Email: your.email@example.com</p>
+<p>🎓 Sungkyunkwan University (SKKU)</p>
+<p>🎬 Film & Media Major</p>
+</div>
+
+</div>
+</section>
+
+<footer>
+© 2026 Lee Jinmi | Film & Media Portfolio
+</footer>
+
+</body>
+</html>
+```
